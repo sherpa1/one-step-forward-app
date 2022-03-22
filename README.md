@@ -2,6 +2,10 @@
 
 Exemple de projet à réaliser dans le cadre du cours de **Technologies Web pour l'Innovation** (_M1 Sciences Cognitives - IDMC - Nancy_).
 
+## Consignes
+
+Créer
+
 ---
 
 **Alexandre Leroux**
