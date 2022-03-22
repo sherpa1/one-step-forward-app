@@ -1,0 +1,39 @@
+version: '3'
+services:
+  osf_database:
+    container_name: osf_database
+    image: postgis/postgis:13-master
+    volumes:
+      - ./data/database:/var/lib/postgresql/data
+    networks:
+      - osf
+
+  osf_cache:
+    container_name: osf_cache
+    image: redis:6
+    networks:
+      - osf
+
+  osf_directus:
+    container_name: osf_directus
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      # By default, uploads are stored in /directus/uploads
+      # Always make sure your volumes matches the storage root when using
+      # local driver
+      - ./uploads:/directus/uploads
+      # Make sure to also mount the volume when using SQLite
+      #- ./database:/directus/database
+      # If you want to load extensions from the host
+      # - ./extensions:/directus/extensions
+    networks:
+      - osf
+    depends_on:
+      - osf_cache
+      - osf_database
+
+networks:
+  osf:
+    driver: bridge

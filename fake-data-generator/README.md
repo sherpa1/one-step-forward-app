@@ -1,6 +1,6 @@
-# One Step Forward
+# Fake Data Generator - One Step Forward
 
-Exemple de projet à réaliser dans le cadre du cours de **Technologies Web pour l'Innovation** (_M1 Sciences Cognitives - IDMC - Nancy_).
+Générateur de données fictives pour le projet **One Step Forward**.
 
 ---
 

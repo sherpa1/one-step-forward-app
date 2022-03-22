@@ -1,0 +1,21 @@
+{
+  "name": "fake-data-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon app.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Alexandre Leroux <alex@sherpa.one> (https://sherpa.one)",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
